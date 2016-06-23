@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "Content-type: text/html"
+echo ""
+echo "<html><head><title>Bash as CGI"
+echo "</title></head><body>"
+echo "<h1>Pan-Tilt camera</h1>"
+echo "Today is $(date)"
+echo "<html> <br>"
+$echo "$(python pypantilt.py)"
+echo "</body></html>"
