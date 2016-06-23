@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<html>
+<head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js">
+</script>
+</head>
+
+<body>
+
+<script>
+function outputUpdatePan(val) {
+	document.querySelector('#leftright').value = val;
+	pan_cmd='http://192.168.10.107/php/runpt.php?argument1=4&argument2=';
+	pan_val = val;
+	pan_url=pan_cmd+pan_val;
+	$.post(pan_url);
+}
+
+function outputUpdateTilt(val) {
+	document.querySelector('#updn').value = val;
+	tilt_cmd='http://192.168.10.107/php/runpt.php?argument1=3&argument2=';
+	tilt_val=val;
+	tilt_url=tilt_cmd+tilt_val;
+	$.post(tilt_url);
+}
+
+</script>
+
+<iframe src="http://192.168.10.107/cgi-bin/pantilt.cgi" 
+width="400" height="50"
+style="border:5px thin">
+</iframe> 
+
+<br><br/>
+
+<iframe src="http://192.168.10.107:8081" 
+width="400" height="200"
+style="border:5px dotted green">
+</iframe> 
+
+<br>Tilt<br/>
+
+<input type="range" id="ver-slider" min="0" max="100" value="40" step="10" name="Tilting" orient="vertical" 
+  onchange="outputUpdateTilt(this.value)" 
+  style="width: 20px; height: 100px; align: middle;
+  -webkit-appearance: slider-vertical;
+  writing-mode: bt-lr;" 
+/>
+<output for="ver-slider" id="updn" >50</output>%
+
+<br><br/>
+
+<label for="hor-slider">Pan</label>
+<input type="range" id="hor-slider" min="0" max="100" value="50" step="1" name="Panaround"
+  oninput="outputUpdatePan(value)" 
+  style="width: 250px; height: 20px;
+  writing-mode: bt-lr;" 
+/>
+<output for="hor-slider" id="leftright">45</output>%
+
+</body>
+</html>
+
+
+
