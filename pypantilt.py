@@ -2,12 +2,12 @@ import subprocess
 import cmd
 import time
 
-pan=4
-tilt=3
-cw=-1
-acw=1
+pan=4      # customize servo number
+tilt=3     # customize your servo number
+cw=-1      # clockwise rotation step
+acw=1      # anti-clockwise rotation step
 location=50 # starting point
-pause=0.2
+pause=0.2   # time delay in msecs
 
 # ------------------------------------------------------------
 # Drives the given servo in the given direction and range
