@@ -1,10 +1,8 @@
 #!/bin/sh
 
-set -x
-PAN=4
-TILT=3
+#set -x
 
-# syntax pt.sh <4=pan;3=tilt> <movement=0to100>
+# syntax pt.sh <servo-number> <movement=0to100>
 
 echo $1=$2%>/dev/servoblaster
-#echo 4=80%>/dev/servoblaster
+
