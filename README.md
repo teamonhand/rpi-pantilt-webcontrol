@@ -53,7 +53,7 @@ positions the appropriate motor (pan or tilt) to any location from 0% to 100% (1
 pantilt.cgi -  
 executes the script pypantilt.py  
 
-slider.html -   
+slider.html - main web page
 installs pan and tilt sliders to control 180deg motion  
 runs a sanity check of the pan and tilt servos   
 displays a window for viewing the camera (needs motion software to be installed)  
@@ -116,10 +116,8 @@ $ sudo service apache2 restart
 ```
 
 Copy the support files pantilt.cgi  pt.sh  pypantilt.py into /usr/lib/cgi-bin  
-
-Software on the client/browser:
-------------------------------
-- slider.html  
+To keep things in one place, make a separate directory under /var/www/html/pantilt
+and copy slider.html into it
 
 Optional:
 ========
@@ -135,6 +133,16 @@ target_dir /tmp/motion  --> this must be writeable
 stream_port 8081  
 stream_localhost off ---> allows access from the internet  
 ```
+
+Testing it all out:
+------------------
+open a browser and navigate to the web page, slider.html
+In my case, I use http://192.168.10.107/pantilt/slider.html
+
+See a screenshot here:
+![Image](../img/screenshot.png?raw=true)
+
+ 
 
 TO DO list:
 - configure for internet access
