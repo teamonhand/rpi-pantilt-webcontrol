@@ -6,12 +6,13 @@ Purpose: To control pan-tilt motion from a web browser using micro servo motors 
 Requirements:
 Hardware:
 --------
-Any PI model (I used RPI-3)
-Mini Pan-Tilt assembly (https://www.adafruit.com/product/1967)
-2 x TowerPro SG92R micro-servos (https://www.adafruit.com/product/169)
-Separate 5V DC supply 2A or more (https://www.adafruit.com/category/44)
-Breadboard
-4 male to female jumper wires
+- Any PI model (I used RPI-3)
+- Mini Pan-Tilt assembly (https://www.adafruit.com/product/1967)
+- 2 x TowerPro SG92R micro-servos (https://www.adafruit.com/product/169)
+- Separate 5V DC supply 2A or more (https://www.adafruit.com/category/44)
+- Breadboard
+- 4 male to female jumper wires
+
 Setup:
 -----
 Connect the wires on the servos as follows:
