@@ -22,16 +22,18 @@ Orange = Red = Positive (5V)
 Yellow = White = Signal (GPIO pins)  
 
 Refer to this table for the GPIO connections  
+
 |Servo number    |GPIO number   |Pin in P1 header|  
-|---|---|---|
-|          0      |         4    |         P1-7  
-|          1      |        17    |         P1-11  
-|          2      |        18    |         P1-12  
-|          3      |        27    |         P1-13  
-|          4      |        22    |         P1-15  
-|          5      |        23    |         P1-16  
-|          6      |        24    |         P1-18  
-|          7      |        25    |         P1-22  
+|----------------|--------------|----------------|
+|          0     |         4    |         P1-7   |
+|          1     |        17    |         P1-11  |
+|          2     |        18    |         P1-12  |
+|          3     |        27    |         P1-13  |
+|          4     |        22    |         P1-15  |
+|          5     |        23    |         P1-16  |
+|          6     |        24    |         P1-18  |
+|          7     |        25    |         P1-22  |
+
 
 My software uses servo numbers 3,4 for tilt and pan respectively, but you can pick any one from the table and modify the software accordingly.  
 
